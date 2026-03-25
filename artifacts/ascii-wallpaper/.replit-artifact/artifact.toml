@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "ASCII Wallpaper Generator"
+version = "1.0.0"
+id = "artifacts/ascii-wallpaper"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23611
+
+[services.development]
+run = "pnpm --filter @workspace/ascii-wallpaper run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ascii-wallpaper", "run", "build" ]
+publicDir = "artifacts/ascii-wallpaper/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23611"
+BASE_PATH = "/"

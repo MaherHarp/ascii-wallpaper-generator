@@ -1,0 +1,13 @@
+packages:
+  "react-dropzone": "Robust handling of image drag-and-drop for the upload zone"
+  "framer-motion": "Smooth UI transitions and micro-interactions for the hacker interface"
+  "clsx": "Utility for constructing CSS class names conditionally"
+  "tailwind-merge": "Utility to merge Tailwind classes without style conflicts"
+  "zustand": "Lightweight state management for the wallpaper configuration"
+
+images: []
+
+notes:
+  - "The app relies purely on the browser's Canvas API for image processing and rendering."
+  - "No backend is required. All state is local."
+  - "The aesthetic is strictly dark mode, terminal/hacker retro feel, using monospace fonts and glowing green accents."
